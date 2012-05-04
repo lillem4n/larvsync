@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+if git merge-file -p -q "$2" "$1" "$3" > /dev/null;
+        then git merge-file "$2" "$1" "$3";
+        else
+                MINE=$(git log --format="%ct" --no-merges master -1);
+                THEIRS=$(git log --format="%ct" --no-merges origin/master -1);
+                if [ $MINE -gt $THEIRS ];
+                        then git merge-file -q --ours "$2" "$1" "$3";
+                        else git merge-file -q --theirs "$2" "$1" "$3";
+                fi
+fi
