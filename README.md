@@ -13,7 +13,7 @@ The goal is to replace dropbox with an open alternative, where the data always r
 * Make sure they are executable (chmod a+x <file>)
 * Set up your server with a git repository created with "git init --bare --shared=group"
 * Then clone it to your preferred path. (for example: "git clone larvit.se:/my/shared/larvsync ~/Desktop/larvsync")
-* IMPORTANT! Run the following lines from within your newly cloned git repository:
+* **IMPORTANT!** Run the following lines from within your newly cloned git repository:
 
 echo "* merge=newest" > .gitattributes;
 echo -e ".gitattributes\n.gitignore" > .gitignore;
