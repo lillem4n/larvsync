@@ -16,7 +16,7 @@ The goal is to replace dropbox with an open alternative, where the data always r
  
 * Make sure they are executable (chmod a+x <file>)
 
-    sudo chmod 700 /usr/bin/git-merge-newest /usr/bin/git-auto-sync
+    sudo chmod a+x /usr/bin/git-merge-newest /usr/bin/git-auto-sync
  
 * Set up your server with a git repository created with "git init --bare --shared=group"
 * **OR** Ask your provider for the correct URL to your server
